@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% block title %}
+харид
+{% endblock %}
+
+{% block body %}
+<div class="alert alert-info "
+
+
+>
+    <h1>харид</h1>
+    <form method = "post">
+       {% csrf_token %}
+        {{ form.nom }}<br>
+         {{ form.harid }}<br>
+         {{ form.furush }}<br>
+<!--        <input type="text" class="form-control" name="nom" id="nom" placeholder="ном "><br>-->
+<!--         <input type="number" class="form-control" name="harid" id="harid" placeholder="харид"><br>-->
+<!--        <input type="number" class="form-control" name="furush" id="furush" placeholder="фуруш"><br>-->
+
+
+<!--        <input type="text" class="form-control" name = "nom" id="nom" placeholder="НОМ"><br>-->
+<!--           <input type="number" class="form-control" name = "harid" id="harid" placeholder="ХАРИД"><br>-->
+<!--           <input type="number" class="form-control" name = "furush" id="furush" placeholder="ФУРУШ"><br>-->
+<!--            <input type="number" class="form-control" name = "hastnest" id="hastnest" placeholder="мавҷудият"><br>-->
+        <button class=" btn btn-success" type="submit">ok</button>
+        <span>{{ error }}</span>
+    </form>
+</div>
+{% endblock %}

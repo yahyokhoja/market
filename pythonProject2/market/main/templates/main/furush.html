@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block title %}
+фуруш
+{% endblock %}
+
+{% block body %}
+ <h1>фуруш</h1>
+ {% for el in articles %}
+
+<div class="alert alert-info ">
+
+
+<h3>{{ el.nom }}</h3>
+    <h3> харид {{ el.harid }} сомони</h3>
+    <h3> фуруш {{ el.furush }} сомони</h3>
+
+
+    </div>
+{% endfor %}
+{% endblock %}

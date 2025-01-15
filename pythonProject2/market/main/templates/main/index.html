@@ -1,0 +1,99 @@
+
+{% extends 'main/base.html' %}
+{% block title %}
+фуруш
+{% endblock %}
+
+{% block body %}
+
+{% load static %}
+
+<h1>асоси</h1>
+{% if task %}
+{% for el in task %}
+
+
+
+
+<!--<div class="col">-->
+<!--          <div class="card shadow-sm">-->
+<!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">расм</text></svg>-->
+<!--            <div class="card-body">-->
+<!--             <h4>{{ el.nom }}</h4>-->
+<!--   <h4>{{ el.harid }}</h4>-->
+<!--    <h4>{{ el.furush }}</h4>-->
+<!--    <h4>{{ el.hastnest }}</h4>-->
+<!--              <div class="d-flex justify-content-between align-items-center">-->
+<!--                <div class="btn-group">-->
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary"></button>-->
+<!--                  <button type="button" class="btn btn-sm btn-outline-secondary"></button>-->
+<!--                </div>-->
+<!--                <small class="text-body-secondary"></small>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+
+
+
+
+
+<div   class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div    class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+
+            <ul class="d-flex list-unstyled mt-auto">
+             <li class="me-auto"  >
+                <img  src="{% static 'main/img/result.jpg' %}"  alt="Bootstrap" width="250" height="250" class="rounded-circle border border-white">
+
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+
+
+
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+
+
+
+              </li>
+
+
+
+
+            </ul>
+          </div>
+
+
+        </div>
+         <small>{{ el.furush }}</small>
+
+         <small  >{{ el.harid }}</small>
+
+
+  <h4 >{{ el.nom }}</h4>
+
+
+    </div>
+
+
+ </div>
+
+
+
+
+
+
+{% endfor %}
+
+{% else %}
+<p>холи</p>
+ {% endif %}
+
+<script src="{% static 'main/js/jguery.js'%}"></script>
+{% endblock %}
